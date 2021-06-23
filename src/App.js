@@ -1,56 +1,42 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 function App() {
-  const [date, setDate] = useState(null);
-  useEffect(() => {
-    async function getDate() {
-      const res = await fetch('/api/date');
-      const newDate = await res.text();
-      setDate(newDate);
-    }
-    getDate();
-  }, []);
   return (
-    <main>
-      <h1>Create React App + Go API</h1>
-      <h2>
-        Deployed with{' '}
-        <a
-          href="https://vercel.com/docs"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Vercel
-        </a>
-        !
-      </h2>
-      <p>
-        <a
-          href="https://github.com/vercel/vercel/tree/main/examples/create-react-app"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          This project
-        </a>{' '}
-        was bootstrapped with{' '}
-        <a href="https://facebook.github.io/create-react-app/">
-          Create React App
-        </a>{' '}
-        and contains three directories, <code>/public</code> for static assets,{' '}
-        <code>/src</code> for components and content, and <code>/api</code>{' '}
-        which contains a serverless <a href="https://golang.org/">Go</a>{' '}
-        function. See{' '}
-        <a href="/api/date">
-          <code>api/date</code> for the Date API with Go
-        </a>
-        .
-      </p>
-      <br />
-      <h2>The date according to Go is:</h2>
-      <p>{date ? date : 'Loading date...'}</p>
-    </main>
+    <div className="container">
+      <header>
+        <h1>Feliz Aniversário</h1>
+        <p>Andressa Meu Amor</p>
+      </header>
+      <div className="content">
+        <div className="img" id="img1">
+          <img src="https://i.ibb.co/r7bJQzg/1.jpg" alt="" />
+        </div>
+        <div className="img" id="img2">
+          <img src="https://i.ibb.co/x3wQSVp/2.jpg" alt="" />
+        </div>
+        <p>
+          Oi meu amor, parece que você entrou no link que eu te mandei, esta é
+          apenas uma pequena homenagem para a pessoa que eu
+        </p>
+        <h2>S2 Mais AMO S2</h2>
+        <p>
+          Neste mundo todo, Desejo toda a felicidade do mudndo para você e que
+          você realize todos os seus sonhos, porque você é a pessoa mais
+          incrivel, maravilhosa, inteligente, e tudo de bom que eu conheço! hoje
+          é seu dia!
+        </p>
+        <div className="img" id="img3">
+          <img src="https://i.ibb.co/pRnqF1x/3.jpg" alt="" />
+        </div>
+        <div className="img" id="img4">
+          <img src="https://i.ibb.co/LRhr9zV/4.jpg" alt="" />
+        </div>
+      </div>
+      <footer>
+        <p>Feito com muito amor para você!</p>
+      </footer>
+    </div>
   );
 }
 
